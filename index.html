@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inko - Premium Inks</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Righteous&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="main">
+    <div id="page1">
+      <div id="nav">
+        <div class="nav-container">
+          <div class="nav-left">
+            <div class="logo">
+              <span class="logo-text">Inko</span>
+              <span class="logo-dot"></span>
+            </div>
+          </div>
+
+          <div class="nav-center">
+            <ul class="nav-links">
+              <li class="nav-item active"><a href="#home">Home</a></li>
+              <li class="nav-item"><a href="#products">Products</a></li>
+              <li class="nav-item"><a href="#about">About</a></li>
+              <li class="nav-item"><a href="#gallery">Gallery</a></li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-right">
+            <div class="search-container">
+              <input type="text" placeholder="Search products..." />
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <!-- <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </button> -->
+          </div>
+        </div>
+      </div>
+      <div id="page2">
+        <div class="cursor-glow"></div>
+        <div class="background-grid">
+          <div class="grid-overlay"></div>
+        </div>
+
+        <div id="center">
+          <div class="scroll-progress">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="content-wrapper">
+            <div class="text-content">
+              <span class="section-tag">Our Products</span>
+              <h2 class="section-title">
+                <span class="text-reveal">Premium</span>
+                <span class="text-reveal outline">Ink</span>
+                <span class="text-reveal gradient">Solutions</span>
+              </h2>
+              <p class="section-description">
+                Experience unparalleled print quality with our innovative ink technology.
+              </p>
+              <div class="ink-features">
+                <div class="feature">
+                  <div class="feature-icon">
+                    <i class="fas fa-droplet"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h3>Color Precision</h3>
+                    <p>98% color accuracy</p>
+                  </div>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">
+                    <i class="fas fa-print"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h3>Print Quality</h3>
+                    <p>Ultra-HD resolution</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="media-content">
+              <div class="image-slider">
+                <div class="image-wrapper">
+                  <div class="image-conatiner active" data-index="1">
+                    <img src="./images/banner/1.webp" alt="Premium Ink">
+                    <div class="image-overlay"></div>
+                  </div>
+                  <div class="image-conatiner" data-index="2">
+                    <img src="./images/banner/2.png" alt="Ink Solutions">
+                    <div class="image-overlay"></div>
+                  </div>
+                  <div class="image-conatiner" data-index="3">
+                    <img src="./images/banner/3.jpg" alt="Professional Printing">
+                    <div class="image-overlay"></div>
+                  </div>
+                </div>
+
+                <div class="slider-controls">
+                  <div class="control-wrapper">
+                    <div class="slide-counter">
+                      <span class="current">01</span>
+                      <span>/</span>
+                      <span class="total">03</span>
+                    </div>
+                    <div class="slide-nav">
+                      <button class="nav-btn prev">←</button>
+                      <button class="nav-btn next">→</button>
+                    </div>
+                  </div>
+                  <div class="progress-indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="floating-cards">
+                <div class="info-card">
+                  <span class="card-label">Eco-Friendly</span>
+                  <h4>Sustainable Ink</h4>
+                  <p>100% recyclable packaging</p>
+                </div>
+                <div class="info-card">
+                  <span class="card-label">Innovation</span>
+                  <h4>Smart Formula</h4>
+                  <p>Quick-dry technology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="main-section" id="featured-products">
+    <div class="section-header">
+      <span class="section-tag">Premium Solutions</span>
+      <h2 class="section-title">Innovative Ink Technology</h2>
+      <p class="section-description">Experience the future of industrial printing with our cutting-edge ink solutions
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./images/featureProducts/ContinuousInkjetPrinter.webp" alt="Continuous Inkjet Printer">
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-content">
+          <h3>Continuous Inkjet Printer</h3>
+          <p>Revolutionary non-contact printing system with advanced droplet control technology. Perfect for high-speed
+            production lines and variable coding requirements.</p>
+          <a href="#" class="product-link">Explore Features <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./images/featureProducts/HandheldInkjetPrinter.webp" alt="Handheld Inkjet Printer">
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-content">
+          <h3>Handheld Inkjet Printer</h3>
+          <p>Portable precision in your palm. Our ergonomic handheld printer delivers professional-grade marking
+            capability with unmatched mobility and ease of use.</p>
+          <a href="#" class="product-link">Explore Features <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./images/featureProducts/IndustrialInkjetPrinter.webp" alt="Industrial Inkjet Printer">
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-content">
+          <h3>Industrial Inkjet Printer</h3>
+          <p>Built for demanding environments, our industrial printer combines robust construction with smart technology
+            for uninterrupted operation and superior print quality.</p>
+          <a href="#" class="product-link">Explore Features <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./images/featureProducts/LaserMarkingMachine.webp" alt="Laser Marking Machine">
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-content">
+          <h3>Laser Marking Machine</h3>
+          <p>Achieve permanent, high-contrast marking on virtually any surface. Our laser system delivers precise,
+            tamper-proof identification for ultimate traceability.</p>
+          <a href="#" class="product-link">Explore Features <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./images/featureProducts/ThermalInkjetPrintersTij.webp" alt="Thermal Inkjet Printer">
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-content">
+          <h3>Thermal Inkjet Printer</h3>
+          <p>Experience next-generation thermal printing technology. Ideal for pharmaceutical and food packaging with
+            its clean, cartridge-based system and HD resolution.</p>
+          <a href="#" class="product-link">Explore Features <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="./images/featureProducts/Maplejet Hx.webp" alt="Maplejet HX Printer">
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-content">
+          <h3>Maplejet HX Series</h3>
+          <p>The flagship of smart printing solutions. Features IoT connectivity, predictive maintenance, and
+            industry-leading print quality for the modern factory.</p>
+          <a href="#" class="product-link">Explore Features <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sample Products Marquee Section -->
+  <section class="main-section" id="sample-products">
+    <div class="section-header">
+      <span class="section-tag">Our Samples</span>
+      <h2 class="section-title">Discover Our Latest Works</h2>
+      <p class="section-description">Experience the quality and precision of our premium ink solutions through our
+        recent projects.</p>
+    </div>
+
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <!-- First Row -->
+        <div class="marquee-content">
+          <div class="sample-item">
+            <img src="./images/sampleProducts/1.webp" alt="Sample Print 1">
+            <div class="sample-overlay">
+              <h4>Premium Packaging</h4>
+              <p>UV Coated Print</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/2.webp" alt="Sample Print 2">
+            <div class="sample-overlay">
+              <h4>Brand Identity</h4>
+              <p>Metallic Ink Series</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/3.webp" alt="Sample Print 3">
+            <div class="sample-overlay">
+              <h4>Editorial Design</h4>
+              <p>High-Resolution Print</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/10.webp" alt="Sample Print 4">
+            <div class="sample-overlay">
+              <h4>Large Format</h4>
+              <p>Eco-Solvent Ink</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/5.webp" alt="Sample Print 4">
+            <div class="sample-overlay">
+              <h4>Large Format</h4>
+              <p>Eco-Solvent Ink</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/6.webp" alt="Sample Print 4">
+            <div class="sample-overlay">
+              <h4>Large Format</h4>
+              <p>Eco-Solvent Ink</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/7.webp" alt="Sample Print 4">
+            <div class="sample-overlay">
+              <h4>Large Format</h4>
+              <p>Eco-Solvent Ink</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/8.webp" alt="Sample Print 4">
+            <div class="sample-overlay">
+              <h4>Large Format</h4>
+              <p>Eco-Solvent Ink</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/9.webp" alt="Sample Print 4">
+            <div class="sample-overlay">
+              <h4>Large Format</h4>
+              <p>Eco-Solvent Ink</p>
+            </div>
+          </div>
+          <div class="sample-item">
+            <img src="./images/sampleProducts/10.webp" alt="Sample Print 4">
+            <div class="sample-overlay">
+              <h4>Large Format</h4>
+              <p>Eco-Solvent Ink</p>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <!-- <div class="marquee-content">
+              <div class="sample-item">
+                  <img src="./images/sampleProducts/1.webp" alt="Sample Print 1">
+                  <div class="sample-overlay">
+                      <h4>Premium Packaging</h4>
+                      <p>UV Coated Print</p>
+                  </div>
+              </div>
+              <div class="sample-item">
+                  <img src="./images/sampleProducts/2.webp" alt="Sample Print 2">
+                  <div class="sample-overlay">
+                      <h4>Brand Identity</h4>
+                      <p>Metallic Ink Series</p>
+                  </div>
+              </div>
+              <div class="sample-item">
+                  <img src="./images/sampleProducts/3.webp" alt="Sample Print 3">
+                  <div class="sample-overlay">
+                      <h4>Editorial Design</h4>
+                      <p>High-Resolution Print</p>
+                  </div>
+              </div>
+              <div class="sample-item">
+                  <img src="./images/sampleProducts/4.webp" alt="Sample Print 4">
+                  <div class="sample-overlay">
+                      <h4>Large Format</h4>
+                      <p>Eco-Solvent Ink</p>
+                  </div>
+              </div> -->
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
