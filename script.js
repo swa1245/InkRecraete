@@ -167,4 +167,250 @@ document.addEventListener('DOMContentLoaded', function() {
             updateMarquee();
         }
     }
+
+    // Video Cards Interaction
+    const videoCards = document.querySelectorAll('.video-card');
+    
+    videoCards.forEach(card => {
+        // Add hover effect for thumbnails
+        const thumbnail = card.querySelector('.video-thumbnail');
+        const playButton = card.querySelector('.play-button');
+        
+        if (thumbnail && playButton) {
+            // Smooth entrance animation for play button
+            card.addEventListener('mouseenter', () => {
+                playButton.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                setTimeout(() => {
+                    playButton.style.transform = 'translate(-50%, -50%) scale(1)';
+                }, 200);
+            });
+
+            // Click handler for video cards
+            card.addEventListener('click', () => {
+                // Here you would typically open a modal or redirect to the video page
+                console.log('Video clicked:', card.querySelector('h3').textContent);
+                // Example modal trigger (you would need to implement the modal)
+                // openVideoModal(card.dataset.videoId);
+            });
+        }
+    });
+
+    // Counter Animation for Global Impact Section
+    const counters = document.querySelectorAll('.counter');
+    let hasAnimated = false;
+
+    function animateCounters() {
+        if (hasAnimated) return;
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.closest('.impact-stat-item').dataset.count);
+            let current = 0;
+            const increment = target / 50; // Adjust speed of counting
+            const duration = 2000; // 2 seconds
+            const step = duration / 50;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    setTimeout(updateCounter, step);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+
+            updateCounter();
+        });
+
+        hasAnimated = true;
+    }
+
+    // Intersection Observer for triggering animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const impactStats = document.querySelector('.impact-stats');
+    if (impactStats) {
+        observer.observe(impactStats);
+    }
+
+    // Loading Animation
+    window.addEventListener('load', () => {
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 1000);
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Scroll to Top
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Enhanced Search
+    const searchInput = document.getElementById('searchInput');
+    const searchDropdown = document.querySelector('.search-dropdown');
+    const searchResults = document.querySelector('.search-results');
+
+    // Sample product data (replace with your actual products)
+    const products = [
+        { name: 'Premium Black Ink', category: 'Printing Ink' },
+        { name: 'UV-Resistant Ink', category: 'Specialty Ink' },
+        { name: 'Eco-Solvent Ink', category: 'Eco-Friendly' },
+        { name: 'Textile Printing Ink', category: 'Fabric Ink' },
+        { name: 'Digital Printing Ink', category: 'Digital Solutions' }
+    ];
+
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        
+        if (query.length > 0) {
+            const filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(query) || 
+                product.category.toLowerCase().includes(query)
+            );
+            
+            displaySearchResults(filteredProducts);
+            searchDropdown.classList.add('active');
+        } else {
+            searchDropdown.classList.remove('active');
+        }
+    });
+
+    function displaySearchResults(results) {
+        searchResults.innerHTML = results.length > 0 
+            ? results.map(product => `
+                <div class="search-result-item">
+                    <h4>${product.name}</h4>
+                    <span class="category">${product.category}</span>
+                </div>
+            `).join('')
+            : '<div class="no-results">No products found</div>';
+    }
+
+    // Close search dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-container')) {
+            searchDropdown.classList.remove('active');
+        }
+    });
+
+    // Contact Form Animations
+    const form = document.getElementById('contactForm');
+    const inputs = form.querySelectorAll('input, textarea, select');
+    
+    inputs.forEach(input => {
+        // Add animation class when input is focused
+        input.addEventListener('focus', () => {
+            input.parentElement.classList.add('focused');
+        });
+        
+        // Remove animation class when input is blurred
+        input.addEventListener('blur', () => {
+            if (!input.value) {
+                input.parentElement.classList.remove('focused');
+            }
+        });
+        
+        // Add animation class if input has value
+        if (input.value) {
+            input.parentElement.classList.add('focused');
+        }
+    });
+    
+    // Form submission animation
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = form.querySelector('.submit-btn');
+        submitBtn.classList.add('loading');
+        
+        // Simulate form submission
+        setTimeout(() => {
+            submitBtn.classList.remove('loading');
+            // Show success message
+            const formMessage = document.createElement('div');
+            formMessage.className = 'form-message success';
+            formMessage.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <p>Thank you for your message! We'll get back to you soon.</p>
+            `;
+            form.appendChild(formMessage);
+            
+            // Reset form
+            form.reset();
+            inputs.forEach(input => {
+                input.parentElement.classList.remove('focused');
+            });
+            
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                formMessage.remove();
+            }, 5000);
+        }, 2000);
+    });
+    
+    // Parallax effect for office cards
+    const offices = document.querySelectorAll('.office');
+    
+    offices.forEach(office => {
+        office.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = office.getBoundingClientRect();
+            const x = (e.clientX - left) / width;
+            const y = (e.clientY - top) / height;
+            
+            const tiltX = (y - 0.5) * 10;
+            const tiltY = (x - 0.5) * 10;
+            
+            office.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(10px)`;
+        });
+        
+        office.addEventListener('mouseleave', () => {
+            office.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+        });
+    });
+    
+    // Social icons hover effect
+    const socialItems = document.querySelectorAll('.social-item');
+    
+    socialItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.querySelector('i').style.animation = 'bounce 0.5s ease infinite';
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.querySelector('i').style.animation = 'none';
+        });
+    });
 });
