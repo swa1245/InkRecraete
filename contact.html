@@ -6,45 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Gauri Inkk-Tec</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Righteous&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 </head>
 
-<body>
+<body data-scroll-container>
     <!-- Navigation -->
     <div id="nav">
         <div class="nav-container">
-            <div class="nav-left">
-                <div class="logo">
-                    <span class="logo-text">Gauri</span>
-                    <span class="logo-dot"></span>
-                </div>
+          <div class="nav-left">
+            <div class="logo">
+              <span class="logo-text">Inko</span>
+              <span class="logo-dot"></span>
             </div>
+          </div>
 
-            <div class="nav-center">
-                <ul class="nav-links">
-                    <li class="nav-item"><a href="index.html">Home</a></li>
-                    <li class="nav-item"><a href="#products">Products</a></li>
-                    <li class="nav-item"><a href="about.html">About</a></li>
-                    <li class="nav-item"><a href="#gallery">Gallery</a></li>
-                    <li class="nav-item active"><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+          <div class="nav-center">
+            <ul class="nav-links">
+              <li class="nav-item "><a href="index.html">Home</a></li>
+              <li class="nav-item"><a href="#products">Products</a></li>
+              <li class="nav-item"><a href="about.html">About</a></li>
+              <!-- <li class="nav-item"><a href="#gallery">Gallery</a></li> -->
+              <li class="nav-item active"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
 
-            <div class="nav-right">
-                <div class="search-container">
-                    <input type="text" placeholder="Search products...">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </div>
+          <div class="nav-right">
+            <div class="search-container">
+              <input type="text" placeholder="Search products..." />
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
             </div>
+            <!-- <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </button> -->
+          </div>
         </div>
-    </div>
+      </div>
 
     <!-- Contact Hero Section -->
     <section class="contact-hero">
         <div class="hero-background">
             <div class="overlay"></div>
-            <img src="https://images.unsplash.com/photo-1596443686812-2f45229eebc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Hero Background">
+            <!-- <img src="https://images.unsplash.com/photo-1596443686812-2f45229eebc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Hero Background"> -->
         </div>
         <div class="hero-content">
             <span class="section-tag">Get in Touch</span>
@@ -54,7 +62,7 @@
                 <span class="text-reveal gradient">Great</span>
             </h1>
             <p class="hero-description">
-                Whether you're looking for premium ink solutions or innovative printing technology, 
+                Whether you're looking for premium ink solutions or innovative printing technology,
                 our team is here to help bring your vision to life.
             </p>
         </div>
@@ -87,99 +95,12 @@
         </div>
     </section>
 
-    <div class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Contact Us</h1>
-            <p class="hero-description">Get in touch with us for any inquiries about our premium ink solutions.</p>
-        </div>
-    </div>
-
     <div class="contact-container">
-        <div class="contact-info-section reveal-element">
-            <div class="contact-info-card">
-                <div class="contact-person animate-item">
-                    <div class="info-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Contact Person</h3>
-                        <div class="person-details">
-                            <h4 class="typing-text">Mukund Naik</h4>
-                            <span class="position slide-in">CEO</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="company-info animate-item">
-                    <div class="info-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Company</h3>
-                        <p class="fade-in">Gauri Inkk-Tec Private Limited</p>
-                    </div>
-                </div>
-
-                <div class="address-info animate-item">
-                    <div class="info-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Address</h3>
-                        <p class="slide-in">
-                            Flat No.B1, Divya Kunj Apts,<br>
-                            Gokhale Rd, Model Colony,<br>
-                            Pune - 411016, Maharashtra, India
-                        </p>
-                        <a href="https://maps.google.com/?q=Flat No.B1, Divya Kunj Apts, Gokhale Rd, Model Colony, Pune - 411016, Maharashtra, India" 
-                           class="direction-link hover-effect" 
-                           target="_blank">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="link-text">Get Directions</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-details">
-                    <div class="phone-info animate-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>Phone</h3>
-                            <a href="tel:080-4606-4955" class="phone-link hover-effect">
-                                <i class="fas fa-phone"></i>
-                                <span class="link-text typing-text">080-4606-4955</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="hours-info animate-item">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>Working Hours</h3>
-                            <div class="working-hours">
-                                <div class="weekday slide-in">
-                                    <span class="days">Monday - Friday:</span>
-                                    <span class="time">9:00 AM - 6:00 PM</span>
-                                </div>
-                                <div class="weekend slide-in">
-                                    <span class="days">Saturday:</span>
-                                    <span class="time">9:00 AM - 2:00 PM</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Contact Form Section -->
         <div class="contact-form-section reveal-element">
             <div class="form-background">
-                <img src="https://images.unsplash.com/photo-1574043860646-15a3494cec26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="Form Background">
+                <img src="https://images.unsplash.com/photo-1574043860646-15a3494cec26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+                    alt="Form Background">
             </div>
             <div class="form-container">
                 <div class="form-content">
@@ -211,96 +132,111 @@
                                 <div class="form-group">
                                     <select id="subject" required>
                                         <option value="" disabled selected>Select Subject</option>
-                                        <option value="sales">Sales Inquiry</option>
+                                        <option value="general">General Inquiry</option>
                                         <option value="support">Technical Support</option>
+                                        <option value="sales">Sales</option>
                                         <option value="partnership">Partnership</option>
-                                        <option value="other">Other</option>
                                     </select>
                                     <div class="line"></div>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group full-width">
                                 <textarea id="message" required></textarea>
                                 <label for="message">Your Message</label>
                                 <div class="line"></div>
                             </div>
                             <button type="submit" class="submit-btn">
-                                <span class="btn-text">Send Message</span>
-                                <i class="fas fa-arrow-right"></i>
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
                             </button>
                         </form>
                     </div>
+
                     <div class="form-right">
-                        <div class="global-presence">
-                            <h3>Global Presence</h3>
-                            <div class="office-locations">
-                                <div class="office">
-                                    <img src="https://images.unsplash.com/photo-1565018054866-968e244671af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="Pune Office">
-                                    <div class="office-content">
-                                        <h4>Pune HQ</h4>
-                                        <p>Flat No.B1, Divya Kunj Apts, Gokhale Rd</p>
-                                        <p>Model Colony, Pune- 411016</p>
-                                    </div>
+                        <div class="contact-info-card">
+                            <div class="contact-person animate-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-user-tie"></i>
                                 </div>
-                                <div class="office">
-                                    <img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80" alt="Mumbai Office">
-                                    <div class="office-content">
-                                        <h4>Mumbai Office</h4>
-                                        <p>Unit 404, Trade Square</p>
-                                        <p>Andheri East, Mumbai- 400069</p>
-                                    </div>
-                                </div>
-                                <div class="office">
-                                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Delhi Office">
-                                    <div class="office-content">
-                                        <h4>Delhi Office</h4>
-                                        <p>Plot 23, Sector 18</p>
-                                        <p>Gurugram, Delhi- 122001</p>
+                                <div class="info-content">
+                                    <h3>Contact Person</h3>
+                                    <div class="person-details">
+                                        <h4 class="typing-text">Mukund Naik</h4>
+                                        <span class="position slide-in">CEO</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="social-connect">
-                            <h3>Connect With Us</h3>
-                            <div class="social-grid">
-                                <a href="#" class="social-item">
-                                    <i class="fab fa-linkedin-in"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                                <a href="#" class="social-item">
-                                    <i class="fab fa-twitter"></i>
-                                    <span>Twitter</span>
-                                </a>
-                                <a href="#" class="social-item">
-                                    <i class="fab fa-instagram"></i>
-                                    <span>Instagram</span>
-                                </a>
-                                <a href="#" class="social-item">
-                                    <i class="fab fa-facebook-f"></i>
-                                    <span>Facebook</span>
-                                </a>
+
+                            <div class="address-info animate-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Address</h3>
+                                    <p class="slide-in">
+                                        Flat No.B1, Divya Kunj Apts,<br>
+                                        Gokhale Rd, Model Colony,<br>
+                                        Pune - 411016, Maharashtra, India
+                                    </p>
+                                    <a href="https://maps.google.com/?q=Flat No.B1, Divya Kunj Apts, Gokhale Rd, Model Colony, Pune - 411016, Maharashtra, India"
+                                        class="direction-link hover-effect" target="_blank">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="link-text">Get Directions</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="contact-details">
+                                    <div class="phone-info animate-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h3>Phone</h3>
+                                            <a href="tel:080-4606-4955" class="phone-link hover-effect">
+                                                <i class="fas fa-phone"></i>
+                                                <span class="link-text typing-text">080-4606-4955</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="hours-info animate-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h3>Working Hours</h3>
+                                            <div class="working-hours">
+                                                <div class="weekday slide-in">
+                                                    <span class="days">Monday - Friday:</span>
+                                                    <span class="time">9:00 AM - 6:00 PM</span>
+                                                </div>
+                                                <div class="weekend slide-in">
+                                                    <span class="days">Saturday:</span>
+                                                    <span class="time">9:00 AM - 2:00 PM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="map-container">
-            <div class="map-overlay"></div>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2678918152913!2d73.83772731489378!3d18.52223998740885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07f4d592dd5%3A0x4c4b4a8a5f5611eb!2sModel%20Colony%2C%20Shivajinagar%2C%20Pune%2C%20Maharashtra%20411016!5e0!3m2!1sen!2sin!4v1645167884492!5m2!1sen!2sin" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
-    </section>
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="map-container">
+                <div class="map-overlay"></div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2678918152913!2d73.83772731489378!3d18.52223998740885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07f4d592dd5%3A0x4c4b4a8a5f5611eb!2sModel%20Colony%2C%20Shivajinagar%2C%20Pune%2C%20Maharashtra%20411016!5e0!3m2!1sen!2sin!4v1645167884492!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer Section -->
     <footer class="site-footer">
@@ -308,12 +244,12 @@
             <div class="footer-main">
                 <div class="footer-brand">
                     <div class="logo">
-                        <span class="logo-text">Gauri</span>
+                        <span class="logo-text">Inko</span>
                         <span class="logo-dot"></span>
                     </div>
-                    <p class="brand-description">
-                        Revolutionizing the printing industry with premium ink solutions and innovative technology.
-                    </p>
+                    <p class="brand-description">Revolutionizing the printing industry with premium ink solutions
+                        and innovative
+                        technology.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -371,7 +307,7 @@
             <div class="footer-bottom">
                 <div class="footer-info">
                     <div class="copyright">
-                        2025 Gauri Inkk-Tec. All rights reserved.
+                        2025 Inko. All rights reserved.
                     </div>
                     <div class="footer-bottom-links">
                         <a href="#">Privacy Policy</a>
@@ -382,15 +318,15 @@
                 <div class="footer-locations">
                     <span class="location">
                         <i class="fas fa-map-marker-alt"></i>
-                        Pune
+                        New York
                     </span>
                     <span class="location">
                         <i class="fas fa-map-marker-alt"></i>
-                        Mumbai
+                        London
                     </span>
                     <span class="location">
                         <i class="fas fa-map-marker-alt"></i>
-                        Delhi
+                        Singapore
                     </span>
                 </div>
             </div>
@@ -402,28 +338,55 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+        // Initialize Locomotive Scroll
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            multiplier: 1,
+            lerp: 0.05,
+            tablet: {
+                smooth: true,
+                breakpoint: 768
+            },
+            smartphone: {
+                smooth: true
+            }
+        });
+
+        // Update scroll on page load
+        window.addEventListener('load', () => {
+            scroll.update();
+        });
+
+        // Update scroll on window resize
+        window.addEventListener('resize', () => {
+            scroll.update();
+        });
+    </script>
     <script src="script.js"></script>
     <script>
         // Form animation
         const formGroups = document.querySelectorAll('.form-group');
-        
+
         formGroups.forEach(group => {
             const input = group.querySelector('input, textarea, select');
             const label = group.querySelector('label');
-            
+
             if (input && label) {
                 input.addEventListener('focus', () => {
                     label.classList.add('active');
                     group.classList.add('focused');
                 });
-                
+
                 input.addEventListener('blur', () => {
                     if (!input.value) {
                         label.classList.remove('active');
                         group.classList.remove('focused');
                     }
                 });
-                
+
                 // Check if input has value on page load
                 if (input.value) {
                     label.classList.add('active');
@@ -434,31 +397,31 @@
 
         // Contact cards parallax
         const cards = document.querySelectorAll('.contact-card');
-        
+
         document.addEventListener('mousemove', (e) => {
             const { clientX, clientY } = e;
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
-            
+
             cards.forEach(card => {
                 const speed = parseFloat(card.getAttribute('data-speed')) || 1;
                 const x = (centerX - clientX) * speed * 0.01;
                 const y = (centerY - clientY) * speed * 0.01;
-                
+
                 card.style.transform = `translate(${x}px, ${y}px)`;
             });
         });
 
         // Form submission
         const contactForm = document.getElementById('contactForm');
-        
+
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Add your form submission logic here
             const formData = new FormData(contactForm);
             console.log('Form submitted:', Object.fromEntries(formData));
-            
+
             // Show success message (you can customize this)
             alert('Thank you for your message! We will get back to you soon.');
             contactForm.reset();

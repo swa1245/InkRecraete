@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inko - Premium Inks</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Righteous&display=swap"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inko - Premium Inks</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Righteous&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 </head>
 
-<body>
+<body data-scroll-container>
   <div class="main">
     <div id="page1">
       <div id="nav">
@@ -28,7 +28,7 @@
               <li class="nav-item active"><a href="#home">Home</a></li>
               <li class="nav-item"><a href="#products">Products</a></li>
               <li class="nav-item"><a href="about.html">About</a></li>
-              <li class="nav-item"><a href="#gallery">Gallery</a></li>
+              <!-- <li class="nav-item"><a href="#gallery">Gallery</a></li> -->
               <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -653,7 +653,7 @@
       <div class="footer-bottom">
         <div class="footer-info">
           <div class="copyright">
-            © 2025 Inko. All rights reserved.
+            2025 Inko. All rights reserved.
           </div>
           <div class="footer-bottom-links">
             <a href="#">Privacy Policy</a>
@@ -684,6 +684,33 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script>
+      // Initialize Locomotive Scroll
+      const scroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true,
+          multiplier: 1,
+          lerp: 0.05,
+          tablet: {
+              smooth: true,
+              breakpoint: 768
+          },
+          smartphone: {
+              smooth: true
+          }
+      });
+
+      // Update scroll on page load
+      window.addEventListener('load', () => {
+          scroll.update();
+      });
+
+      // Update scroll on window resize
+      window.addEventListener('resize', () => {
+          scroll.update();
+      });
+  </script>
 
   <script src="script.js"></script>
 </body>
